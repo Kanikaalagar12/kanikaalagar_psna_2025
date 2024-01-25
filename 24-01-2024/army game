@@ -1,0 +1,20 @@
+def gameWithCells(n, m):
+    packages_in_row = math.ceil(n / 2)
+    packages_in_column = math.ceil(m / 2)
+    total_packages = packages_in_row * packages_in_column
+    return total_packages
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    m = int(first_multiple_input[1])
+
+    result = gameWithCells(n, m)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
